@@ -4,8 +4,8 @@ const CustomToolTip = ({label,payload}) => {
     return (
         <Container>
             {
-                payload?.map((e)=>(
-                    <BoxValue>${e?.value}</BoxValue>
+                payload?.map((e,i)=>(
+                    <BoxValue key={i}>${e?.value}</BoxValue>
                 ))
             }
             
