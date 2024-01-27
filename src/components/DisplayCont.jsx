@@ -20,9 +20,9 @@ flex:1;
 overflow-y: scroll;
   height: auto;
   padding-bottom: 30px;
+  @media screen and (max-width:950px){
+    width: 95%;
+    /* background-color: green; */
+  }
 `
 
-const Text = styled.div`
-    color: orange;
-
-`

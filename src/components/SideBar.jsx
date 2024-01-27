@@ -328,4 +328,11 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   position:sticky;
+  @media screen and (max-width:1119px){
+    width: 65px;
+  }
+  @media screen and (max-width:950px){
+    display:none;
+  }
+
 `;

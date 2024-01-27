@@ -103,14 +103,19 @@ export default TotalComp;
 
 const IconImage = styled(Image)`
 object-fit: contain;
+cursor:pointer;
+
 `
 
 const PercentText = styled.div`
   color: #606060;
-     font-size: 14px;
+     font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  @media screen and (max-width:1100px){
+   font-size: 10px;
+  }
 `;
 
 const PercentValue = styled.div`
@@ -118,7 +123,7 @@ const PercentValue = styled.div`
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
-  color: ${({cl})=>cl === "Total Order" || cl === "Total Income"? "#34caa5" : "#ED544E"}
+  color: ${({cl})=>cl === "Total Order" || cl === "Total Income"? "#34caa5" : "#ED544E"};
 `;
 
 const PercentIcon = styled.div``;
@@ -143,22 +148,51 @@ const PercentCompAndText = styled.div`
 const Value = styled.div`
   color: #3a3f51;
   
-  font-size: 23px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 600;
+  margin:18px 0;
+  @media screen and (max-width:600px){
+   font-size: 20px;
+   margin: 14px 0;
+  }
 `;
 
 const TotalText = styled.div`
   color: #898989;
   
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   margin: 5px 0;
+  @media screen and (max-width:600px){
+   font-size: 13px;
+  }
 `;
 
 const ChartComp = styled.div`
-  /* flex: 3; */
+  @media screen and (max-width:1120px){
+   width:100px;
+  }
+  @media screen and (max-width:1090px){
+   width:80px;
+   overflow: hidden;
+  }
+  @media screen and (max-width:950px){
+   /* width:200px; */
+   svg{
+    width: 200px;
+    height: 60px;
+   }
+  }
+  @media screen and (max-width:400px){
+   width:150px;
+   svg{
+    width: 150px;
+    height: 40px;
+   }
+  }
+  
 `;
 
 const IconComp = styled.div`
@@ -171,11 +205,21 @@ const IconComp = styled.div`
   align-items: center;
   cursor: pointer;
   /* flex: 1; */
+  @media screen and (max-width:1120px){
+    width:37px;
+    height: 37px;
+  }
+  @media screen and (max-width:950px){
+    width:45px;
+    height: 45px;
+  }
+  
 `;
 
 const IconAndChart = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 15px;
 `;
 
 const Container = styled.div`

@@ -42,14 +42,14 @@ const ItemHolder = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: 20px;
+  gap: 25px;
 `;
 
 const SeeAll = styled.div`
   color: #34caa5;
   text-align: center;
   
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   cursor: pointer;
@@ -63,9 +63,12 @@ const SeeAll = styled.div`
 const TopText = styled.div`
   color: #26282c;
   
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 600;
+  @media screen and (max-width:600px){
+   font-size: 15px;
+  }
 `;
 
 const Heading = styled.div`
@@ -73,6 +76,7 @@ const Heading = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 20px;
 `;
 
 const Container = styled.div`

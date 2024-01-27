@@ -27,7 +27,7 @@ height: 100%;
 const Percent = styled.div`
 color: #525252;
    
-font-size: 18px;
+font-size: 14px;
 font-style: normal;
 font-weight: 400;
 `
@@ -35,7 +35,7 @@ font-weight: 400;
 const Amount = styled.div`
 color:  #525252;
    
-font-size: 18px;
+font-size: 14px;
 font-style: normal;
 font-weight: 400;
 `
@@ -59,7 +59,7 @@ const Title = styled.div`
 text-align: left;
 color: #22242C;
    
-font-size: 18px;
+font-size: 14px;
 font-style: normal;
 font-weight: 600;
 `

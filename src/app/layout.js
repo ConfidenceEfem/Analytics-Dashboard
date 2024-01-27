@@ -1,4 +1,4 @@
-import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
 

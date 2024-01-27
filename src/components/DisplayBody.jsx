@@ -36,6 +36,10 @@ width: 100%;
   gap: 20px;
   grid-auto-rows: minmax(120px, auto);
   height: auto;
+  @media screen and (max-width:950px){
+  display:flex;
+  flex-direction: column;
+  }
 `;
 
 const Container = styled.div`
@@ -43,5 +47,13 @@ const Container = styled.div`
   display: flex;
   padding:  30px;
   padding-bottom: 0px;
+  @media screen and (max-width:600px){
+    padding:  15px;
+  padding-bottom: 0px;
+  }
+  /* @media screen and (max-width:950px){
+    width: 95%;
+    background-color: red;
+  } */
  
 `;

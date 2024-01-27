@@ -25,3 +25,7 @@ body {
     )
     rgb(var(--background-start-rgb)); */
 }
+
+p {
+  font-family: var(--plus-font);
+}

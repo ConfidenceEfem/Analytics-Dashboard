@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import SalesChart from "../SalesChart"
 
 const SalesComp = () => {
     return ( 
@@ -12,7 +13,9 @@ const SalesComp = () => {
                     </WeeklySelectComp>
                 </RightItem>
             </Heading>
-            <ChartComp>chart</ChartComp>
+            <ChartComp>
+                <SalesChart/>
+            </ChartComp>
         </Container>
     )
 }
@@ -53,7 +56,9 @@ gap: 10px;
 `
 
 const ChartComp = styled.div`
-
+width: 100%;
+height: 400px;;
+/* height: 100%; */
 `
 
 const HeadingText = styled.div`
@@ -67,6 +72,7 @@ const Heading = styled.div`
 display:flex;
 justify-content: space-between;
 align-items: center;
+margin-bottom: 30px;
 `
 
 const Container = styled.div`

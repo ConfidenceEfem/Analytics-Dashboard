@@ -12,9 +12,14 @@ import img4 from "../assets/img/img4.png"
 import img5 from "../assets/img/img5.png"
 import view from "../assets/view.png"
 import Image from "next/image";
+import {plusJakartaSans,montserrat} from "../components/font/font"
+
 
 
 const TableComponent = () => {
+
+ 
+
   function createData(name, date, amount, status,img) {
     return { name, date, amount, status,img  };
   }
@@ -28,15 +33,17 @@ const TableComponent = () => {
   ];
 
   return (
-    <TableContainer component={Paper} sx={{ boxShadow: "none" }}>
+    <TableContainer component={Paper} sx={{ boxShadow: "none" }} className={`${plusJakartaSans.variable}`}>
       <Table sx={{ minWidth: 650, width:"100%" }} style={{width:"100%"}}>
         <TableHead sx={{width:"100%"}} style={{width:"100%"}}>
-          <TableRow sx={{width:"100%"}} style={{width:"100%"}}>
+          <TableRow sx={{width:"100%"}} style={{width:"100%",fontFamily: `${plusJakartaSans.style.fontFamily}`}}
+          className={`${plusJakartaSans.variable}`}
+          >
             <TableCell
              sx={{
                 color: "#9CA4AB",
                 fontSize: "16px",
-                   
+                  //  fontFamily:"Poppins",
                 fontWeight: "500",
               }}
             >Name</TableCell>
@@ -83,7 +90,7 @@ const TableComponent = () => {
               key={row.name}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
-              <TableCell component="th" scope="row" sx={{display:"flex",gap:"5px",alignItems:"center"}}>
+              <TableCell component="th" scope="row" sx={{display:"flex",gap:"8px",alignItems:"center"}}>
                 <Image
                 src={row?.img}
                 
@@ -95,37 +102,39 @@ const TableComponent = () => {
                 }}/>
                 <div
                 style={{
-                    fontSize:"16px",
-                    fontWeight:"500",
-                    fontStyle:"normal",
-                       
-                    color:"#3A3F51"
+                    fontSize:"15px",
+                    fontWeight:"500",                       
+                    color:"#3A3F51",
+                    fontFamily: `${montserrat.style.fontFamily}`
+                    
                 }}
                 >
                     {row.name}
                 </div>
               </TableCell>
               <TableCell align="left" sx={{
-                fontSize:"16px",
+                fontSize:"14px",
                 fontWeight:"400",
                 fontStyle:"normal",
-                   
+                fontFamily: `${plusJakartaSans.style.fontFamily}`,
                 color:"#737373"
               }}>{row.date}</TableCell>
               <TableCell align="left"
               sx={{
                 color: "#0D062D",
                 fontSize: "16px",
-                   
+                fontFamily: `${montserrat.style.fontFamily}`,
                 fontWeight: "500",
               }}
               >{row.amount}</TableCell>
               <TableCell align="left"
               sx={{
                 color: row.status === "Paid"? "#34CAA5": "#ED544E",
-                fontSize: "16px",
+                fontSize: "14px",
                    
                 fontWeight: "400",
+                fontFamily: `${plusJakartaSans.style.fontFamily}`,
+
               }}
               >{row.status}</TableCell>
               <TableCell align="center"
@@ -137,7 +146,9 @@ const TableComponent = () => {
                 cursor:"pointer",
                 display:"flex",
                 alignItems:"center",
-                gap:"5px"
+                gap:"5px",
+                fontFamily: `${plusJakartaSans.style.fontFamily}`,
+
               }}
               > <Image src={view}/>View</TableCell>
             </TableRow>

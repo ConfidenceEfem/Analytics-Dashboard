@@ -22,20 +22,24 @@ const TableComp = styled.div``
 const SeeAll = styled.div`
 color: #34CAA5;
 text-align: center;
-   
-font-size: 18px;
+font-size: 14px;
 font-style: normal;
 font-weight: 500;
 cursor: pointer;
+@media screen and (max-width:600px){
+   font-size: 13px;
+  }
 `
 
 const Title = styled.div`
 color: #26282C;
-   
 font-size: 18px;
 font-style: normal;
 font-weight: 600;
 padding: 0 15px;
+@media screen and (max-width:600px){
+   font-size: 15px;
+  }
 `
 
 const Heading = styled.div`
@@ -43,6 +47,7 @@ width: 100%;
 display: flex;
 justify-content: space-between;
 align-items: center;
+margin-bottom: 15px;
 `
 
 const Container = styled.div`
