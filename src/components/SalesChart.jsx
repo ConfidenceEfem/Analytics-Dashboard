@@ -82,7 +82,6 @@ const SalesChart = () => {
 
   const [barGraphData, setBarGraphData] = useState({});
   const [focusBar, setFocusBar] = useState(null);
-  const [windowSize, setWindowSize] = useState(window.innerWidth)
 
   return (
     <ResponsiveContainerMain width="100%" height="100%">
@@ -158,7 +157,7 @@ const SalesChart = () => {
             }}
           ></Bar>
      
-        {windowSize > 601 ? null : (
+        {/* {windowSize > 601 ? null : (
           <Brush startIndex={8}>
             <Bar
               dataKey="uv"
@@ -174,7 +173,7 @@ const SalesChart = () => {
               }}
             ></Bar>
           </Brush>
-        )}
+        )} */}
         {/* {window.innerWidth < 601 ? null : (
           <Bar
             dataKey="uv"
