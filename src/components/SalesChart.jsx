@@ -142,7 +142,7 @@ const SalesChart = () => {
         </defs>
         {/* <Legend /> */}
 
-        {window.innerWidth > 601 ? null : (
+        {/* {window.innerWidth > 601 ? null : (
           <Bar
             dataKey="uv"
             name={" "}
@@ -156,8 +156,8 @@ const SalesChart = () => {
               setBarGraphData(data);
             }}
           ></Bar>
-        )}
-        {window.innerWidth > 601 ? null : (
+        )} */}
+        {/* {window.innerWidth > 601 ? null : (
           <Brush startIndex={8}>
             <Bar
               dataKey="uv"
@@ -173,8 +173,8 @@ const SalesChart = () => {
               }}
             ></Bar>
           </Brush>
-        )}
-        {window.innerWidth < 601 ? null : (
+        )} */}
+        {/* {window.innerWidth < 601 ? null : (
           <Bar
             dataKey="uv"
             name={" "}
@@ -188,7 +188,7 @@ const SalesChart = () => {
               setBarGraphData(data);
             }}
           ></Bar>
-        )}
+        )} */}
       </BarChart>
     </ResponsiveContainerMain>
   );
