@@ -2,7 +2,6 @@
 import SideBar from "@/components/SideBar";
 import DisplayCont from "@/components/DisplayCont";
 import styled from "styled-components";
-import Head from "next/head";
 
 const Home = () => {
   return (

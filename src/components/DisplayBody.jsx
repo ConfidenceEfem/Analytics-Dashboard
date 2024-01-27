@@ -14,7 +14,7 @@ const DisplayBody = () => {
   return (
     <Container>
       <Wrapper>
-        <SalesComp />
+        {/* <SalesComp /> */}
         <TotalComp title="Total Order" value={"350"} img={icon}/>
         <TotalComp title="Total Refund" value={"270"} img={icon1}/>
         <TotalComp title="Average Sales" value={"1567"} img={icon2}/>
