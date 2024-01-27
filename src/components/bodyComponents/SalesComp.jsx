@@ -67,6 +67,9 @@ color: #26282C;
 font-size: 18px;
 font-style: normal;
 font-weight: 600;
+@media screen and (max-width: 600px){
+        font-size: 16px;
+    }
 `
 const Heading = styled.div`
 display:flex;

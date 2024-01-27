@@ -3,13 +3,21 @@ import styled from "styled-components"
 import profile from "../assets/profile.png"
 import Image from "next/image"
 import MenuIcon from '@mui/icons-material/Menu';
+import img from "../assets/logo.png"
+import MobileNavBar from "./MobileNavBar";
 
-const Header = () => {
+const Header = ({toggle, setToggle}) => {
     return (
-        <Container> 
-            <MenuMainIcon>
+        <Container>
+            {/* <MobileNavBar/>  */}
+            <MenuMainIcon
+              onClick={()=>{
+                setToggle(!toggle)
+            }}
+            >
             <MenuIcon/>
             </MenuMainIcon>
+            <Logo src={img}/>
             <Title>Dashboard</Title>
             <NavsHolder>
                 <SearchBarComp>
@@ -77,6 +85,19 @@ const Header = () => {
 }
 
 export default Header
+
+const Logo = styled(Image)`
+display:none;
+
+  @media screen and (max-width:950px){
+    /* margin: 24px 0; */
+    display:flex;
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+  cursor:pointer;
+  }
+`;
 
 const MobileSearchIcon = styled.div`
 display:none;
@@ -297,6 +318,9 @@ color: #26282C;
 font-size: 19px;
 font-style: normal;
 font-weight: 600;
+@media screen and (max-width:950px){
+  display:none;
+  }
 @media screen and (max-width:400px){
    font-size: 15px;
   }
@@ -310,6 +334,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     padding: 0 30px;
+    /* position:relative; */
     @media screen and (max-width:950px){
     justify-content: space-between;
     
