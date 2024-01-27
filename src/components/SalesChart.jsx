@@ -79,7 +79,6 @@ const data = [
 ];
 
 const SalesChart = () => {
-  console.log(window.innerWidth);
 
   const [barGraphData, setBarGraphData] = useState({});
   const [focusBar, setFocusBar] = useState(null);
